@@ -1,0 +1,12 @@
+<h1>Your Catalog</h1>
+<% @catalogs.each do |catalog| %>
+  <h2>
+    <%= link_to catalog.element, catalog %>
+  </h2>
+  <h3>
+    <%= catalog.category %>
+  </h3>
+<% end %>
+<h4>
+<%= link_to "Add an element", new_catalog_path %>
+</h4>

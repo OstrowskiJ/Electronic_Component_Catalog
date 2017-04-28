@@ -1,5 +1,36 @@
-<%= simple_form_for(@catalog, html: { class: 'form-horizontal'}) do |f| %>
-  <%= f.input :title%>
-  <%= f.input :category%>
-  <%= f.button :submit %>
-<% end %>
+<p id="notice"><%= notice %></p>
+<div class="container center_div">
+<div class="row vertical-center-row">
+  <div class="col-md-6">
+    <div class="panel panel-primary">
+      <div class="panel-heading">Create element</div>
+      <div class="panel-body">
+
+        <%= simple_form_for(@catalog, html: { class: 'form-horizontal'}) do |f| %>
+
+          <p>
+            <%= f.label :category%>
+            <%= f.select :category,["Resistance","Transistors","Capacitance","Microcontrolers","Batteries"]%>
+          </p>
+          <p>
+            <%= f.label :element%>
+            <%= f.text_field :element, placeholder: "Technical name of the element"%>
+          </p>
+          <p>
+            <%= f.label :value%>
+            <%= f.text_field :value%>
+            <%= f.select :unit,["Ohm","kOhm","MOhm","kB","MB","GB","TB"]%>
+          </p>
+          <p>
+            <%= f.label :amount%>
+            <%= f.text_field :amount, placeholder: "How many elements do you have ?"%>
+          </p>
+
+          <%= f.submit "Submit"%>
+          <% end %>
+          </td>
+</div>
+</div>
+</div>
+</div>
+</div>

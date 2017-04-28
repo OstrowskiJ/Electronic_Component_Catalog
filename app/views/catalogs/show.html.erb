@@ -1,0 +1,9 @@
+<div id="catalog">
+  <p><%= @catalog.category %></p>
+  <p><%= @catalog.element %></p>
+  <p><%= @catalog.value %></p>
+  <p><%= @catalog.amount %></p>
+</div>
+<%= link_to "Back", root_path %>
+<%= link_to "Edit", edit_catalog_path(@catalog) %>
+<%= link_to "Delete", catalog_path(@catalog), method: :delete, data: { confirm: "Are you sure?"} %>

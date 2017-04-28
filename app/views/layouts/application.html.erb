@@ -6,14 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+            <%= link_to "Electronic component catalog", root_path, class: "navbar-brand"%></div>
+        <div class="nav navbar-nav navbar-right">
+            <%= link_to "Add new element", new_catalog_path, class: "navbar navbar-link"%>
+</div></div></nav>
     <% if user_signed_in? %>
     <p> Hello, <%= current_user.name %> - <%= link_to "Sing Out", destroy_user_session_path, :method=> 'delete'%></p>
     <br>
     <% end %>
-
-    <%= yield %>
+    <div class="container">
+    <%= yield %></div>
   </body>
 </html>

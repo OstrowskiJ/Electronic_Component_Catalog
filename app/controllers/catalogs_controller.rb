@@ -1,6 +1,7 @@
 class CatalogsController < ApplicationController
     before_action :find_catalog, only: [:show,:edit,:update,:destroy]
     def index
+      @catalogs = Catalog.all.order("created_at DESC")
     end
 
     def show
@@ -22,16 +23,23 @@ class CatalogsController < ApplicationController
     def edit
     end
 
-    def updated
+    def update
+      if @catalog.update(catalog_params)
+        redirect_to @catalog
+      else
+        render 'edit'
+      end
     end
 
     def destroy
+      @catalog.destroy
+      redirect_to root_path
     end
 
     private
 
     def catalog_params
-      params.require(:catalog).permit(:title, :category)
+      params.require(:catalog).permit(:category, :element, :value, :amount)
     end
 
     def find_catalog
