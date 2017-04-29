@@ -1,12 +1,22 @@
-<h1>Your Catalog</h1>
-<% @catalogs.each do |catalog| %>
-  <h2>
-    <%= link_to catalog.element, catalog %>
-  </h2>
-  <h3>
-    <%= catalog.category %>
-  </h3>
+<div class="containertable">
+  <table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Category</th>
+      <th>Value</th>
+      <th>Amount</th>
+    </tr>
+  </thead>
+  <% @catalogs.each do |catalog| %>
+  <tbody>
+  <tr>
+    <td><%= link_to catalog.element, catalog %></td>
+    <td><%=catalog.category%></td>
+    <td><%=catalog.value%></td>
+    <td><%=catalog.amount%></td>
+  </tr>
 <% end %>
-<h4>
+  </table>
 <%= link_to "Add an element", new_catalog_path %>
-</h4>
+</div>
