@@ -1,5 +1,6 @@
+
 <div class="containertable">
-  <table class="table table-responsive">
+  <table class="table table-hover">
   <thead>
     <tr>
       <th>Element</th>
@@ -11,7 +12,7 @@
   <% @catalogs.each do |catalog| %>
   <tbody>
   <tr>
-    <td><%= link_to catalog.element, catalog %></td>
+    <td><%= link_to catalog.element, catalog, class: "a" %></td>
     <td><%=catalog.category%></td>
     <td><%=catalog.value%></td>
     <td><%=catalog.amount%></td>

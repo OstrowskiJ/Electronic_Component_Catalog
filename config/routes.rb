@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :locations
   root 'home#index'
 
   resources :posts,:catalogs

@@ -25,9 +25,55 @@
 }
 
 .containerbuttons{
-  margin: auto;
-    width: 50%;
-    border: 3px;
+    margin: auto;
     padding: 10px;
     text-align: center;
+}
+
+.containerlinks
+{
+  margin-bottom: -25px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+.links
+{
+  padding-bottom: 5px;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #E2EDF5;
+}
+
+/* unvisited link */
+.a:link {
+    color: #3F739A;
+    text-decoration: none;
+    background-color: none;
+    font-weight: bold;
+}
+
+/* visited link */
+.a:visited {
+    color: #3F739A;
+    text-decoration: none;
+    background-color: none;
+    text-font: bold;
+}
+
+/* mouse over link */
+.a:hover {
+    color: #4F90C1;
+    text-decoration: underline;
+    background-color: none;
+    text-font: bold;
+    cursor: pointer;
+}
+
+/* selected link */
+.a:active {
+    color: blue;
+    text-decoration: none;
+    background-color: none;
 }
