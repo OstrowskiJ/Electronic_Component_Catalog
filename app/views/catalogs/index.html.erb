@@ -7,6 +7,7 @@
       <th>Category</th>
       <th>Value</th>
       <th>Amount</th>
+      <th>User's login name</th>
     </tr>
   </thead>
   <% @catalogs.each do |catalog| %>
@@ -16,6 +17,7 @@
     <td><%=catalog.category%></td>
     <td><%=catalog.value%></td>
     <td><%=catalog.amount%></td>
+    <td><%= link_to catalog.user.name, user_path(catalog.user_id), class: "a" %></td>
   </tr>
 <% end %>
   </table>

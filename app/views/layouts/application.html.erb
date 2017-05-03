@@ -13,12 +13,21 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-            <%= link_to "Electronic component catalog", root_path, class: "navbar-brand"%></div>
+          <%= link_to "Electronic component catalog", root_path, class: "navbar-brand"%>
+        </div>
         <div class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-            <%= link_to "Sing Out", destroy_user_session_path, :method=> 'delete', class: "navbar navbar-link"%>
-            <% end %>
-</div></div></nav>
+          <%= form_tag catalogs_path, :method=> 'get' do %>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search" %>
+          <%= link_to "Advanced search", new_search_path %>
+          <%= link_to "Sing Out", destroy_user_session_path, :method=> 'delete', class: "navbar navbar-link"%>
+          <% end %>
+        </div>
+
+      <% end %>
+
+</div></nav>
     <%= yield %></div>
   </body>
 </html>

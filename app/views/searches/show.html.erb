@@ -1,0 +1,21 @@
+<h1>Search results</h1>
+
+
+<% if @search.search_catalogs.empty? %>
+
+  <p>No Records Found</p>
+
+  <%else%>
+
+  <%@search.search_catalogs.each do |s|%>
+<br>
+
+<div class="div">
+  <%= link_to s.element, s, class:"a"%>
+  <%= s.value%>
+  <%= s.category%>
+  <%= link_to s.user.name, user_path(s.user_id), class: "a" %>
+</div>
+<%end%>
+<%end%>
+<%= link_to 'Back', new_search_path %>

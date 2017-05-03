@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170429232330) do
+ActiveRecord::Schema.define(version: 20170503231433) do
 
   create_table "catalogs", force: :cascade do |t|
     t.string   "category"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20170429232330) do
     t.integer  "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -28,11 +29,21 @@ ActiveRecord::Schema.define(version: 20170429232330) do
     t.string   "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "keywords"
+    t.string   "category"
+    t.decimal  "min_value"
+    t.decimal  "max_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

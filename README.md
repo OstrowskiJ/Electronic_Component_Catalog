@@ -1,8 +1,6 @@
-# README
+# This is an EEC application project.
 
-This is an EEC application project.
-
-Main functionalities of the app will be:
+##### Main functionalities of the app will be:
 
 * Register/ log in /log out of user
 * Creation of user elements catalog
@@ -14,8 +12,18 @@ Main functionalities of the app will be:
 * Adding elements to server database
 * Changing parameters and description on server database
 
-For now we created the register, login, logout module. In which we encapsulate authentication functionalities for creating an account.
-An account module has got:
-* Email confirmation
+###### First we created the register, login, logout module. In which we encapsulate authentication functionalities for creating an account. An account module has got:
+* Email confirmation with possibility of malfunction
 * Password recovery
 * And member memory
+
+###### Then, we add a prototype of main functionality - editable catalog. For now it has got:
+* Adding, editing and destroying an elements in catalog
+* Profile connection > in profile section: basic information about user, and geolocalization
+* Search engine with advanced searching tool
+
+###### Gems used in a project:
+* Devise
+* Geocoder
+* Gmaps4rails
+* Simple form

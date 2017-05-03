@@ -77,3 +77,15 @@
     text-decoration: none;
     background-color: none;
 }
+
+.center
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+    height:100%;
+    vertical-align: middle;
+}
