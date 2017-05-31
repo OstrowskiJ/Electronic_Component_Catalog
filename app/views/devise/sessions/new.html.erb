@@ -1,10 +1,14 @@
+<body>
+<div class="podpis">Welcome to our App, customer !</div>
 <div class="containerlogin">
-<div class="panel panel-primary devise-bs">
 
+<div class="panel panel-primary devise-bs">
   <div class="panel-heading">
     <h4><%= t('.sign_in', default: 'Log in') %></h4>
   </div>
+
   <div class="panel-body">
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
       <div class="form-group">
         <%= f.label :email %>
@@ -28,6 +32,8 @@
           <%= render 'devise/shared/links' %></p></div></div>
   </div>
 </div>
-</div>
 
 </div>
+</div>
+
+</body>

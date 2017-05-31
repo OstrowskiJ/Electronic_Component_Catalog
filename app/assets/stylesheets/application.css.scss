@@ -16,3 +16,53 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+
+.podpis{
+  top: 10%;
+  border: 3px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  font-size: 35px;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  line-height: 1em;
+  display: inline-block;
+}
+
+.centruj {
+  width: auto;
+  text-align: center;
+}
+
+
+.footer {
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  border-color: #252525;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+
+.wylacznik
+{
+  font-size: 28px;
+  color: white;
+}
+.wylacznik:hover
+{
+  color: gray;
+}

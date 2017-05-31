@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ECC</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <title>Electronic Component Catalog</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,24 +12,41 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
+          <span class="glyphicon glyphicon-flash"></span>
           <%= link_to "Electronic component catalog", root_path, class: "navbar-brand"%>
         </div>
-        <div class="nav navbar-nav navbar-right">
+
+
           <% if user_signed_in? %>
+          <form class="navbar-form">
+            <div class="nav navbar-nav navbar-center">
+
+
+          <div class="form-group">
           <%= form_tag catalogs_path, :method=> 'get' do %>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search" %>
-          <%= link_to "Advanced search", new_search_path %>
-          <%= link_to "Sing Out", destroy_user_session_path, :method=> 'delete', class: "navbar navbar-link"%>
+          <%= text_field_tag :search, params[:search], :class=>"form-control" %>
+          <%= submit_tag "Search", :class=>"btn btn-default" %>
+          <%= link_to "Advanced search", new_search_path, :class=>"btn btn-default"  %>
+          </div>
+          </div>
+          </form>
+          <div class="nav navbar-nav navbar-right">
+          <%= link_to "<span class=\"glyphicon glyphicon-off\"></span>".html_safe, destroy_user_session_path, :method=> 'delete', class: "wylacznik"%>
           <% end %>
-        </div>
 
       <% end %>
-
+</div>
 </div></nav>
     <%= yield %></div>
+
+    <footer class="footer">
+    <div class="centruj">
+        <span class="text-muted">© 2017 <%= link_to "Our github", "https://github.com/JackDePirate/ElectronicComponentsCatalog"%>, All rights reserved 2016-2017. 
+  </div></span>
+      </div>
+      </footer>
   </body>
 </html>

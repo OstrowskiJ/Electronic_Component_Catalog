@@ -1,7 +1,8 @@
 class CatalogsController < ApplicationController
     before_action :find_catalog, only: [:show,:edit,:update,:destroy]
     def index
-      @catalogs = Catalog.all.order("created_at DESC")
+      @catalogs = current_user.catalogs
+      # @catalogs = Catalog.all.order("created_at DESC")
       @catalogs = Catalog.search(params[:search])
     end
 
@@ -32,6 +33,10 @@ class CatalogsController < ApplicationController
       end
     end
 
+    def mycat
+
+   end
+
     def destroy
       @catalog.destroy
       redirect_to root_path
@@ -46,4 +51,6 @@ class CatalogsController < ApplicationController
     def find_catalog
       @catalog = Catalog.find(params[:id])
     end
+
+
 end

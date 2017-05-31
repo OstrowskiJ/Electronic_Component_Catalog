@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
 <div class="row">
-  <div class="col-md-6">
     <div class="panel panel-primary">
       <div class="panel-heading">Create element</div>
       <div class="panel-body">
@@ -8,27 +6,26 @@
         <%= simple_form_for(@catalog, html: { class: 'form-horizontal'}) do |f| %>
 
           <p>
-            <%= f.label :category%>
+            <div class="col-sm-3"><%= f.label :category%></div>
             <%= f.select :category,["Resistance","Transistors","Capacitance","Microcontrolers","Batteries"]%>
           </p>
           <p>
-            <%= f.label :element%>
+            <div class="col-sm-3"><%= f.label :element%></div>
             <%= f.text_field :element, placeholder: "Technical name of the element"%>
           </p>
           <p>
-            <%= f.label :value%>
+            <div class="col-sm-3"><%= f.label :value%></div>
             <%= f.text_field :value%>
             <%= f.select :unit,["Ohm","kOhm","MOhm","kB","MB","GB","TB"]%>
           </p>
           <p>
-            <%= f.label :amount%>
+            <div class="col-sm-3"><%= f.label :amount%></div>
             <%= f.text_field :amount, placeholder: "How many elements do you have ?"%>
           </p>
-
-          <%= f.submit "Submit"%>
+          <%= f.submit "Submit", class: 'btn btn-primary'%>
+          <%= link_to "Cancel", root_path, class: 'btn btn-danger mr-2' %>
           <% end %>
           </td>
-</div>
 </div>
 </div>
 </div>
