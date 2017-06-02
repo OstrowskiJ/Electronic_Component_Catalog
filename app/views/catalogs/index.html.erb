@@ -1,17 +1,3 @@
-<div class="containeroptions">
-
-  <ul style="
-    padding-left: 0px;
-    margin-left: 0px;
-    margin-right: 0px;">
-    <li><%= link_to "Change your password", edit_user_registration_path %></li>
-    <li><%= link_to "All items in database", catalogs_path %></li>
-    <li><a href="#">Show items near you</a></li>
-    <li><a href="#">Delete account</a></li>
-    <li><a href="#">Change Account info</a></li>
-
-  </ul>
-</div>
 <div class="podpis">Hello user, this is your catalog.</div>
 <div class="containertable">
 
@@ -33,7 +19,7 @@
     <td><%=catalog.category%></td>
     <td><%=catalog.value%></td>
     <td><%=catalog.amount%></td>
-    <td><%= link_to catalog.user.name, user_path(catalog.user_id), class: "a" %></td>
+    <td><%= link_to catalog.user.name, user_path(catalog.user_id), class: "a", data: { turbolinks: false } %></td>
     <% end %>
   </tr>
 <% end %>

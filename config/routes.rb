@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  get '/users/:id', :to => 'users#show', :as => :user
   mount ActionCable.server => '/cable'
   resources :posts,:catalogs,:locations, :searches;
   devise_for :users, controllers: {registrations: "registrations"}
