@@ -1,8 +1,7 @@
 class CatalogsController < ApplicationController
     before_action :find_catalog, only: [:show,:edit,:update,:destroy]
     def index
-      @catalogs = current_user.catalogs
-      # @catalogs = Catalog.all.order("created_at DESC")
+      @catalogs = Catalog.all.order("created_at DESC")
       @catalogs = Catalog.search(params[:search])
     end
 

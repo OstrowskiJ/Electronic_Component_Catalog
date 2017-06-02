@@ -5,10 +5,10 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <title>Electronic Component Catalog</title>
     <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= csrf_meta_tags %>
   </head>
 
   <body>
@@ -35,16 +35,31 @@
           </form>
           <div class="nav navbar-nav navbar-right">
           <%= link_to "<span class=\"glyphicon glyphicon-off\"></span>".html_safe, destroy_user_session_path, :method=> 'delete', class: "wylacznik"%>
+          </div></div></nav>
+          <div class="containeroptions">
+
+            <ul style="
+              padding-left: 0px;
+              margin-left: 0px;
+              margin-right: 0px;">
+              <li><%= link_to "Change your password", edit_user_registration_path %></li>
+              <li><%= link_to "All items in database", catalogs_path %></li>
+              <li><a href="#">Show items near you</a></li>
+              <li><a href="#">Delete account</a></li>
+              <li><a href="#">Change Account info</a></li>
+
+            </ul>
+          </div>
           <% end %>
 
       <% end %>
-</div>
-</div></nav>
-    <%= yield %></div>
+
+
+    <%= yield %>
 
     <footer class="footer">
     <div class="centruj">
-        <span class="text-muted">© 2017 <%= link_to "Our github", "https://github.com/JackDePirate/ElectronicComponentsCatalog"%>, All rights reserved 2016-2017. 
+        <span class="text-muted">© 2017 <%= link_to "Our github", "https://github.com/OstrowskiJ/Electronic_Component_Catalog"%>, All rights reserved 2016-2017.
   </div></span>
       </div>
       </footer>

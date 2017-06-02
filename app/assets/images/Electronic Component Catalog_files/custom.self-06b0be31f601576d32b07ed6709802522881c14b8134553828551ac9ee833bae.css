@@ -1,0 +1,32 @@
+/*flash*/
+/* line 3, /Users/kubaostrowski/Desktop/ITAPP_ECC/ECC/app/assets/stylesheets/custom.css.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 10, /Users/kubaostrowski/Desktop/ITAPP_ECC/ECC/app/assets/stylesheets/custom.css.scss */
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 17, /Users/kubaostrowski/Desktop/ITAPP_ECC/ECC/app/assets/stylesheets/custom.css.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+/* line 24, /Users/kubaostrowski/Desktop/ITAPP_ECC/ECC/app/assets/stylesheets/custom.css.scss */
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}

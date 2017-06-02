@@ -1,7 +1,7 @@
 <div class="podpis">Didn't receive mail? You can resend it now!</div>
 
 <div class="containerlogin">
-<div class="panel panel-info devise-bs">
+<div class="panel panel-primary devise-bs">
 
   <div class="panel-heading">
     <h4><%= t('.password', default: 'Resend confirmation mail') %></h4>
@@ -15,8 +15,14 @@
     <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), placeholder: 'Email Address', class: 'form-control'  %>
   </div>
 <div class="containerbuttons">
-  <%= f.submit  t('.sign_in', default: 'Resend confirmation mail'), class: 'btn btn-info' %>
+  <%= f.submit  t('.sign_in', default: 'Resend confirmation mail'), class: 'btn btn-primary' %>
 
 <p><div class="containerlinks"><div class="panel-footer">
-  <%= render 'devise/shared/links' %></p></div></div></div></div>
+  <%= render 'devise/shared/links' %></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <% end %>
