@@ -1,6 +1,6 @@
 <div class="message">
   <a href="" class="message_profile-pic"></a>
-  <%= link_to shoutbox.user.name, user_path(shoutbox.user_id), class: "message_username"%></a>
+  <%= link_to shoutbox.user.name, user_path(shoutbox.user_id), class: "message_username", data: { turbolinks: false }%></a>
   <span class="message_timestamp">
     <%= shoutbox.created_at %>
   </span>

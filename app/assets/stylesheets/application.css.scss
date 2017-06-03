@@ -66,3 +66,27 @@
 {
   color: gray;
 }
+
+.containerprofile
+{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  min-height: 300px;
+  top: 50%;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -0%)
+}
+
+#map
+{
+  width: 350px;
+  height: 250px;
+  float: right;
+  position: fixed;
+  padding-bottom: 10px
+}
