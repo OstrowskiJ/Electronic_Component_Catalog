@@ -13,6 +13,8 @@
 //= require cable
 //= require jquery
 //= require jquery_ujs
+//= require chat
+//= require private_pub
 //= require jquery.turbolinks
 //= require bootstrap-sprockets
 //= require turbolinks

@@ -30,6 +30,8 @@ gem 'simple_form'
 gem 'haml'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'private_pub'
+gem 'thin'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -3,7 +3,19 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
-  root 'home#index'
+  authenticated :user do
+    root 'catalogs#index'
+  end
+
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "devise/sessions#new"
+    end
+  end
+
+  resources :conversations do
+      resources :messages
+    end
 
   mount ActionCable.server => '/cable'
   resources :posts,:catalogs,:locations, :searches;

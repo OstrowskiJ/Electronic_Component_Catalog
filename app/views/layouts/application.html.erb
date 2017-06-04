@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta content='<%= user_signed_in? ? current_user.id : "" %>' name='user-id'/>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <title>Electronic Component Catalog</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -22,8 +29,6 @@
           <% if user_signed_in? %>
           <form class="navbar-form">
             <div class="nav navbar-nav navbar-center">
-
-
           <div class="form-group">
           <%= form_tag catalogs_path, :method=> 'get' do %>
           <%= text_field_tag :search, params[:search], :class=>"form-control" %>
@@ -60,8 +65,29 @@
     <footer class="footer">
     <div class="centruj">
         <span class="text-muted">© 2017 <%= link_to "Our github", "https://github.com/OstrowskiJ/Electronic_Component_Catalog"%>, All rights reserved 2016-2017.
-  </div></span>
+  </div>
+</span>
       </div>
       </footer>
   </body>
+
+  <% if current_user %>
+   <script type="text/javascript">
+        channel = <%= raw ('"' + '/notifications' + current_user.id.to_s + '"') %>
+        PrivatePub.subscribe(channel, function(data) {
+
+        var sender_id = data.sid;
+        var recipient_id = data.rip;
+        var conversation_id = data.cid;
+
+
+        $.post("/conversations", { sender_id: sender_id, recipient_id: recipient_id }, function (data) {
+            chatBox.chatWith(conversation_id);
+        });
+
+        });
+    </script>
+    <%= subscribe_to "/notifications" + current_user.id.to_s %>
+    <% end %>
+
 </html>
