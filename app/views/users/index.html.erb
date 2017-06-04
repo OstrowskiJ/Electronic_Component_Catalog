@@ -1,12 +1,12 @@
+<div class="containerconv">
 <div class="row">
-  <!-- Not implemented on tutorial -->
-  <div class="col-md-4">
-    <div style="height: 300px; overflow-y: auto;">
+
+    <!-- <div style="height: 300px; overflow-y: auto;">
       <div class="panel panel-default">
-        <!-- Default panel contents -->
+        Default panel contents
         <div class="panel-heading">Registered Users</div>
 
-        <!-- Table -->
+        Table
         <table class="table">
           <thead>
           <tr>
@@ -31,19 +31,18 @@
         </table>
       </div>
 
-    </div>
-    <hr>
-    <h3>Your Conversations</h3>
+    </div> -->
+
+    <div class ="centruj"><h3>Your Conversations</h3></div>
 
     <div style="height: 400px; overflow-y: auto;">
       <% if @conversations.any? %>
           <ul class="media-list">
             <% @conversations.each do |conversation| %>
                 <li class="media">
-                  <%= image_tag("http://placehold.it/50x50", class: "media-object pull-left") %>
+                  <%= image_tag("http://aspirehire-co-uk.mysmarterwebsite.co.uk/aspirehire-co-uk/_img/profile.svg", class: "user-menu_profile-pic") %>
                   <div class="media-body">
-                    <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
-                        <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
+                        <h4 class="media-heading"><%= link_to conversation_interlocutor(conversation).name, conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %></h4>
                         <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
                   </div>
                 </li>
@@ -55,10 +54,10 @@
       <% end %>
     </div>
 
-  </div>
 
   <div class="col-md-4">
 
   </div>
 
+</div>
 </div>

@@ -22,7 +22,7 @@
     <nav class="navbar navbar-inverse">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to "Electronic component catalog", root_path, class: "navbar-brand"%>
+          <%= link_to "<span class=\"glyphicon glyphicon-flash\"></span> Electronic Component Catalog".html_safe, root_path, class: "navbar-brand"%>
         </div>
 
 
@@ -38,6 +38,7 @@
           </div>
           </form>
           <div class="nav navbar-nav navbar-right">
+          <%= link_to "<span class=\"glyphicon glyphicon-envelope\"></span>".html_safe, users_path, class: "wylacznik", data: { turbolinks: false }%>
           <%= link_to "<span class=\"glyphicon glyphicon-off\"></span>".html_safe, destroy_user_session_path, :method=> 'delete', class: "wylacznik"%>
           </div></div></nav>
           <div class="containeroptions">
@@ -46,12 +47,13 @@
               padding-left: 0px;
               margin-left: 0px;
               margin-right: 0px;">
-              <li><%= link_to "My profile", user_path(current_user), data: { turbolinks: false } %></li>
-              <li><%= link_to "Change your password", edit_user_registration_path %></li>
-              <li><%= link_to "All items in database", catalogs_path %></li>
-              <li><%= link_to "Shoutbox", rooms_show_path %></li>
-              <li><a href="#">Delete account</a></li>
-              <li><a href="#">Change Account info</a></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-user\"></span> My profile".html_safe, user_path(current_user), data: { turbolinks: false } %></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-search\"></span> Search".html_safe, new_search_path %></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-envelope\"></span> Mailbox".html_safe, users_path, data: { turbolinks: false } %></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-comment\"></span> Shoutbox".html_safe, rooms_show_path %></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-cog\"></span> Account management".html_safe, edit_user_registration_path %></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-th\"></span> All items".html_safe, catalogs_all_path %></li>
+              <li><%= link_to "<span class=\"glyphicon glyphicon-remove\"></span> Delete Account".html_safe, registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete  %></li>
 
             </ul>
           </div>

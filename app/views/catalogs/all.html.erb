@@ -1,0 +1,30 @@
+<div class="podpis">These are elements of all database.</div>
+<div class="containertable">
+  <div class="col-xs-4">
+  <%= form_tag catalogs_all_path, :method=> 'get' do %>
+  <%= text_field_tag :search, params[:search], :class=>"form-control"%>
+  <%= submit_tag "Search", :class=>"btn btn-default" %>
+  <%end%></div>
+  <table class="table table-hover">
+  <thead class="thead-default">
+    <tr>
+      <th>Element</th>
+      <th>Category</th>
+      <th>Value</th>
+      <th>Amount</th>
+      <th>User's login name</th>
+    </tr>
+  </thead>
+  <% @catalogs.each do |catalog| %>
+  <tbody>
+  <tr>
+    <td><%= link_to catalog.element, catalog, class: "a" %></td>
+    <td><%=catalog.category%></td>
+    <td><%=catalog.value%></td>
+    <td><%=catalog.amount%></td>
+    <td><%= link_to catalog.user.name, user_path(catalog.user_id), class: "a", data: { turbolinks: false } %></td>
+  </tr>
+<% end %>
+  </table>
+    <%= will_paginate @catalogs, renderer: BootstrapPagination::Rails, previous_label:"<" ,next_label:">", inner_window:1, outer_window:1%>
+</div>

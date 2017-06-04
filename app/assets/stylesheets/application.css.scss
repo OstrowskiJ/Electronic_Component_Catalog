@@ -17,6 +17,35 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+h5
+{
+  color:white;
+}
+
+
+.centrujcontainer
+{
+    margin: auto;
+    padding: 10px;
+    width: 60%
+}
+
+.containersearch
+{
+
+  margin-top: 5%;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: rgba(100, 100, 100, 0.3);
+}
+
+
+ h3 {
+   padding: 15px;
+   font-size: 40px;
+   font-family: Roboto, sans-serif;
+   color:white;
+ }
 
 .podpis{
   top: 10%;
@@ -59,8 +88,10 @@
 
 .wylacznik
 {
+
   font-size: 28px;
   color: white;
+  padding: 3px;
 }
 .wylacznik:hover
 {
@@ -71,22 +102,59 @@
 {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px;
-  min-height: 300px;
-  top: 50%;
+  height: 25%;
+  bottom: 100px;
   width: 50%;
   border: 3px;
   padding: 10px;
   position: absolute;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -0%)
+  transform: translate(-50%, -0%);
+  display: flex;
+}
+
+.containerprofile2
+{
+  font-size: 15px;
+
+  color: white;
+  align-items: stretch;
+  padding: 10px;
+  width:50%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+#text {
+    padding: 0px;
 }
 
 #map
 {
-  width: 350px;
-  height: 250px;
+
+  padding: 10px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  top: 0%;
+  right: 0%;
+  width: 40%;
+  height: 100%;
   float: right;
-  position: fixed;
-  padding-bottom: 10px
+  position: absolute;
+  padding-bottom: 10px;
+}
+
+br {
+   display: block;
+     line-height:22px;
+}
+
+.paginejszon
+{
+  padding-top: 20px;
+  bottom: 0%;
+  float: left;
+  position:fixed;
 }

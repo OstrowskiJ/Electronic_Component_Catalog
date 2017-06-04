@@ -21,21 +21,38 @@
   <td><%=catalog.value%></td>
   <td><%=catalog.amount%></td>
 </tr>
-<% end %>
-</table></div>
 
+<% end %>
+
+</table>
+<div class="containerbuttons">
+  <div class="paginejszon">
+  <%= will_paginate @user_catalogs, renderer: BootstrapPagination::Rails, previous_label:"<" ,next_label:">", inner_window:1, outer_window:1%>
+  </div>
+<% if @user == current_user %>
+<%= link_to "Add an element", new_catalog_path, class: 'btn btn-default' %>
+<% end %>
+</div>
+</div>
 <div class="containerprofile">
 
-  <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
-              "data-sid" => current_user.id, "data-rip" => @user.id %>
-<p>Login: <%= @user.name %></p>
-<p>Name: <%=  %></p>
-<p>Surname: <%= %></p>
-<p>Address: <%= %></p>
+
+<div class="containerprofile2">
+<div class="col-sm-4">Login:</div> <%= @user.name %></br>
+<div class="col-sm-4">Name:</div>  <%= @user.first_name %></br>
+<div class="col-sm-4">Lastname:</div>  <%= @user.last_name %></br>
+<div class="col-sm-4">Birthday:</div>  <%= @user.birthday %></br>
+<div class="col-sm-4">About:</div>  <%= @user.about %></br>
+<% if @user != current_user %>
+<div class="col-sm-3"><%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+            "data-sid" => current_user.id, "data-rip" => @user.id %></div>
+            <%end%>
+</div>
 <table>
 
+
   <tbody>
-    <if user>
+    <% if @user == current_user %>
     <% @user.locations.each do |location| %>
     <% if location.user == current_user %>
       <tr>
@@ -45,6 +62,7 @@
       <%= link_to 'New Location', new_location_path %>
       <%end%>
     <% end %>
+    <%end %>
   </tbody>
 </table>
 
@@ -62,25 +80,4 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.getMap().setZoom(13);
 });
 </script>
-</div>
-
-
-<div style="margin-top:1000px; height: 400px; overflow-y: auto;">
-  <!-- <% if @conversations.try(:any?) %> -->
-      <ul class="media-list">
-        <% @conversations.each do |conversation| %>
-            <li class="media">
-              <%= image_tag("http://placehold.it/50x50", class: "media-object pull-left") %>
-              <div class="media-body">
-                <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
-                    <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
-                    <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
-              </div>
-            </li>
-
-        <% end %>
-      </ul>
-  <!-- <% else %>
-      <p>You have no conversations. Click send message with any user to create one.</p> -->
-  <% end %>
 </div>

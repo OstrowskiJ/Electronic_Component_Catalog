@@ -14,9 +14,9 @@
       <br><a href="#">#wielkopolskie</a>
       <br><a href="#">#mazowieckie</a>
       <br><a href="#">#lodzkie</a>
+    </div>
 </div>
 
-    </div>
     <div class="listings_direct-messages">
       <h2 class="listings_header">Direct Messages</h2>
       <div class="channel_list">
@@ -24,9 +24,7 @@
     </div>
   </div>
 
-<div class="footershoutbox">
   <div class="user-menu">
-    <span class="user-menu_profile-pic"></span><span class="user-menu_username"><%= link_to current_user.email, user_path(current_user), class: "user-menu_username" %></span>
+    <span class="user-menu_profile-pic"></span><%= link_to current_user.email, user_path(current_user), class: "user-menu_username" %>
     <span class="connection_status">online</span>
   </div>
-</div>

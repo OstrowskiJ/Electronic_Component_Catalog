@@ -1,4 +1,5 @@
-<h1>Search results</h1>
+<div class="containerconv">
+<div class="centruj"><h3>Search results</h3></div>
 
 
 <% if @search.search_catalogs.empty? %>
@@ -7,15 +8,29 @@
 
   <%else%>
 
+  <div class="containertable2">
+    <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Element</th>
+        <th>Category</th>
+        <th>Value</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+
   <%@search.search_catalogs.each do |s|%>
 <br>
-
-<div class="div">
-  <%= link_to s.element, s, class:"a"%>
-  <%= s.value%>
-  <%= s.category%>
-  <%= link_to s.user.name, user_path(s.user_id), class: "a" %>
+<tbody>
+<tr>
+  <td><%= link_to s.element, s, class:"a" %></td>
+  <td><%= s.value%></td>
+  <td><%= s.category%></td>
+  <td><%= link_to s.user.name, user_path(s.user_id), class: "a", data: { turbolinks: false } %></td>
+</tr>
+</tbody>
+<%end%>
+<%end%>
+</table>
 </div>
-<%end%>
-<%end%>
-<%= link_to 'Back', new_search_path %>
+</div>

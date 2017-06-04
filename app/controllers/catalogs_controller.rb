@@ -32,8 +32,10 @@ class CatalogsController < ApplicationController
       end
     end
 
-    def mycat
-
+   def all
+     @catalogs = Catalog.all.order("created_at DESC")
+     @catalogs = Catalog.search(params[:search])
+     @catalogs = @catalogs.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
    end
 
     def destroy
