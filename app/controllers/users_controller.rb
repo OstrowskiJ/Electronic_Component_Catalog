@@ -8,12 +8,18 @@ before_filter :authenticate_user!
     marker.lat location.latitude
     marker.lng location.longitude
     marker.infowindow location.address
+    @user_locations = @user.locations.all
   end
 end
 
 def catalogs
     @user = User.find(params[:id])
     @catalogs = @user.catalogs.paginate(:page => params[:page], :per_page => 8)
+  end
+
+  def locations
+      @user = User.find(params[:id])
+      @locations = @user.locations.all
   end
 
   def index

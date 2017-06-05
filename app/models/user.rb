@@ -11,7 +11,6 @@ class User < ApplicationRecord
 
     after_create :create_default_conversation
 
-
     private
 
     # for demo purposes

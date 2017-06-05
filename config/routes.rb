@@ -5,10 +5,12 @@ Rails.application.routes.draw do
 
   get 'users/show'
   get 'users/:id/catalogs' => 'users#catalogs', :as => :user_catalogs
+  get 'users/:id/locations' => 'users#locations', :as => :user_locations
 
 
   resources :users do
   member do
+    get :locations
     get :catalogs
   end
 end

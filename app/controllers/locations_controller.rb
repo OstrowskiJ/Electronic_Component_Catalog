@@ -3,18 +3,24 @@ class LocationsController < ApplicationController
 
   # GET /locations
   # GET /locations.json
+  # @locations = Location.all
+  # @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
+  # marker.lat location.latitude
+  # marker.lng location.longitude
+  # marker.infowindow location.address
   def index
-  @locations = Location.all
-  @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
-  marker.lat location.latitude
-  marker.lng location.longitude
-  marker.infowindow location.address
+    if params[:search1].present?
+      @locations = Location.near(params[:search1], 1000, :order => false)
+    else
+      @locations = Location.all.order("created_at DESC")
+    end
   end
-end
 
   # GET /locations/1
   # GET /locations/1.json
   def show
+    # returns Geocoder::Result object
+    result = request.location
   end
 
   # GET /locations/new

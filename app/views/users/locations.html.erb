@@ -1,0 +1,12 @@
+<% @locations.each do |location| %>
+  <tr>
+    <td><%= location.latitude %></td>
+    <td><%= location.longitude %></td>
+    <td><%= location.address %></td>
+    <td><%= location.nearbys(1000) %></td>
+
+    <td><%= link_to 'Show', location %></td>
+    <td><%= link_to 'Edit', edit_location_path(location) %></td>
+    <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

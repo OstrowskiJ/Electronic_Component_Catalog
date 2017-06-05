@@ -1,7 +1,27 @@
 <script src="//maps.google.com/maps/api/js?key=AIzaSyBtes2ViBduzHOc958-PvHe9jfViPmN0BQ"></script>
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
+<% if @user == current_user %>
+<div class="listings">
+  <h4>People near you</h4>
 
+  <% @user.locations.each do |location| %>
+  <% if location.user == current_user %>
+    <tr>
+      <% for location in location.nearbys(10) %>
+        <div class = "user-menu2"><span class="user-menu_profile-pic"></span><%= link_to location.user.name, location.user, data: { turbolinks: false }, class: "user-menu_username" %> (<%= location.distance.round(2) %> kilometers)
+        </div>
+      <% end %>
+      <!-- <td><%= link_to 'Edit location', edit_location_path(location) %></td>
+      <td><%= link_to 'Destroy Location', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <%= link_to 'New Location', new_location_path %> -->
+    <%end%>
+  <% end %>
+  <%end %>
+
+</div>
+</div>
 <div class="podpis"><%=@user.name%>'s Catalog</div>
 <div class="containertable">
   <table class="table table-hover">
@@ -52,21 +72,12 @@
 
 
   <tbody>
-    <% if @user == current_user %>
-    <% @user.locations.each do |location| %>
-    <% if location.user == current_user %>
-      <tr>
-        <td><%= link_to 'Edit location', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy Location', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <%= link_to 'New Location', new_location_path %>
-      <%end%>
-    <% end %>
-    <%end %>
   </tbody>
 </table>
 
 <br>
+
+
 
   <div id="map"></div>
 
