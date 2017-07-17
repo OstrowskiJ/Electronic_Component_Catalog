@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>chat.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../";
+  var index_rel_prefix = "../../../";
+</script>
+
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/darkfish.js"></script>
+
+<link href="../../../css/fonts.css" rel="stylesheet">
+<link href="../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../README_md.html">README</a>
+  
+    <li><a href="../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/catalogs_coffee.html">catalogs.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/channels/room_coffee.html">room.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/chat_js.html">chat.js</a>
+  
+    <li><a href="../../../app/assets/javascripts/conversations_coffee.html">conversations.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/base_coffee.html">base.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/base/base_coffee.html">base.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google_coffee.html">google.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/bound_coffee.html">bound.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/circle_coffee.html">circle.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/clusterer_coffee.html">clusterer.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/kml_coffee.html">kml.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/map_coffee.html">map.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/marker_coffee.html">marker.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/polygon_coffee.html">polygon.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/builders/polyline_coffee.html">polyline.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/bound_coffee.html">bound.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/circle_coffee.html">circle.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/clusterer_coffee.html">clusterer.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/common_coffee.html">common.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/kml_coffee.html">kml.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/map_coffee.html">map.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/marker_coffee.html">marker.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/polygon_coffee.html">polygon.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/objects/polyline_coffee.html">polyline.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/google/primitives_coffee.html">primitives.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/objects/base_builder_coffee.html">base_builder.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/objects/builder_coffee.html">builder.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/objects/handler_coffee.html">handler.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/gmaps/objects/null_clusterer_coffee.html">null_clusterer.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/home_coffee.html">home.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/locations_coffee.html">locations.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/messages_coffee.html">messages.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/posts_coffee.html">posts.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/rooms_coffee.html">rooms.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/searches_coffee.html">searches.coffee</a>
+  
+    <li><a href="../../../app/assets/javascripts/users_js.html">users.js</a>
+  
+    <li><a href="../../../app/assets/stylesheets/application_css_scss.html">application.css.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/catalogs_scss.html">catalogs.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/chat_css.html">chat.css</a>
+  
+    <li><a href="../../../app/assets/stylesheets/conversations_scss.html">conversations.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/custom_css_scss.html">custom.css.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/home_scss.html">home.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/locations_scss.html">locations.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/messages_scss.html">messages.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/posts_scss.html">posts.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/rooms_scss.html">rooms.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/searches_scss.html">searches.scss</a>
+  
+    <li><a href="../../../app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="../../../app/views/locations/_location_json_jbuilder.html">_location.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/locations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/locations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/posts/_post_json_jbuilder.html">_post.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/posts/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/posts/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/users/_location_json_jbuilder.html">_location.json.jbuilder</a>
+  
+    <li><a href="../../../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../db/test_sqlite3.html">test.sqlite3</a>
+  
+    <li><a href="../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../../private_pub_ru.html">private_pub.ru</a>
+  
+    <li><a href="../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../public/javascripts/gmaps_google_js.html">gmaps_google.js</a>
+  
+    <li><a href="../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../../vendor/assets/javascripts/underscore_js.html">underscore.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/javascripts/chat.js">
+
+<pre>Chat logic
+
+Most of the js functionality is inspired from anatgarg.com
+jQuery tag Module from the tutorial
+http://anantgarg.com/2009/05/13/gmail-facebook-style-jquery-chat/</pre>
+
+<p>var chatboxFocus = new Array(); var chatBoxes = new Array();</p>
+
+<p>var ready = function () {</p>
+
+<pre>chatBox = {
+
+    /**
+       creates an inline chatbox on the page by calling the
+       createChatBox function passing along the unique conversation_id
+
+       @param conversation_id
+      /
+
+    chatWith: function (conversation_id) {
+
+        chatBox.createChatBox(conversation_id);
+        $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxtextarea&quot;).focus();
+    },
+
+    /**
+       closes the chatbox by essentially hiding it from the page
+
+       @param conversation_id
+      /
+
+    close: function (conversation_id) {
+        $(&#39;#chatbox_&#39; + conversation_id).css(&#39;display&#39;, &#39;none&#39;);
+        chatBox.restructure();
+    },
+
+    /**
+       Plays a notification sound when a new chat message arrives
+      /
+
+    notify: function () {
+        var audioplayer = $(&#39;#chatAudio&#39;)[0];
+        audioplayer.play();
+    },
+
+    /**
+       Handles &#39;smart layouts&#39; of the chatboxes. Like when new chatboxes are
+       added or removed from the view, it restructures them so that they appear
+       neatly aligned on the page
+      /
+
+    restructure: function () {
+        align = 0;
+        for (x in chatBoxes) {
+            chatbox_id = chatBoxes[x];
+
+            if ($(&quot;#chatbox_&quot; + chatbox_id).css(&#39;display&#39;) != &#39;none&#39;) {
+                if (align == 0) {
+                    $(&quot;#chatbox_&quot; + chatbox_id).css(&#39;right&#39;, &#39;20px&#39;);
+                } else {
+                    width = (align) * (280 + 7) + 20;
+                    $(&quot;#chatbox_&quot; + chatbox_id).css(&#39;right&#39;, width + &#39;px&#39;);
+                }
+                align++;
+            }
+        }
+
+    },
+
+    /**
+       Takes in two parameters. It is responsible for fetching the specific conversation&#39;s
+       html page and appending it to the body of our home page e.g if conversation_id = 1
+
+       $.get(&quot;conversations/1, function(data){
+          // rest of the logic here
+       }, &quot;html&quot;)
+
+       @param conversation_id
+       @param minimizeChatBox
+      /
+
+    createChatBox: function (conversation_id, minimizeChatBox) {
+        if ($(&quot;#chatbox_&quot; + conversation_id).length &gt; 0) {
+            if ($(&quot;#chatbox_&quot; + conversation_id).css(&#39;display&#39;) == &#39;none&#39;) {
+                $(&quot;#chatbox_&quot; + conversation_id).css(&#39;display&#39;, &#39;block&#39;);
+                chatBox.restructure();
+            }
+            $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxtextarea&quot;).focus();
+            return;
+        }
+
+        $(&quot;body&quot;).append(&#39;&lt;div id=&quot;chatbox_&#39; + conversation_id + &#39;&quot; class=&quot;chatbox&quot;&gt;&lt;/div&gt;&#39;)
+
+        $.get(&quot;/conversations/&quot; + conversation_id, function (data) {
+            $(&#39;#chatbox_&#39; + conversation_id).html(data);
+            $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxcontent&quot;).scrollTop($(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxcontent&quot;)[0].scrollHeight);
+        }, &quot;html&quot;);
+
+        $(&quot;#chatbox_&quot; + conversation_id).css(&#39;bottom&#39;, &#39;0px&#39;);
+
+        chatBoxeslength = 0;
+
+        for (x in chatBoxes) {
+            if ($(&quot;#chatbox_&quot; + chatBoxes[x]).css(&#39;display&#39;) != &#39;none&#39;) {
+                chatBoxeslength++;
+            }
+        }
+
+        if (chatBoxeslength == 0) {
+            $(&quot;#chatbox_&quot; + conversation_id).css(&#39;right&#39;, &#39;20px&#39;);
+        } else {
+            width = (chatBoxeslength) * (280 + 7) + 20;
+            $(&quot;#chatbox_&quot; + conversation_id).css(&#39;right&#39;, width + &#39;px&#39;);
+        }
+
+        chatBoxes.push(conversation_id);
+
+        if (minimizeChatBox == 1) {
+            minimizedChatBoxes = new Array();
+
+            if ($.cookie(&#39;chatbox_minimized&#39;)) {
+                minimizedChatBoxes = $.cookie(&#39;chatbox_minimized&#39;).split(/\|/);
+            }
+            minimize = 0;
+            for (j = 0; j &lt; minimizedChatBoxes.length; j++) {
+                if (minimizedChatBoxes[j] == conversation_id) {
+                    minimize = 1;
+                }
+            }
+
+            if (minimize == 1) {
+                $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxcontent&#39;).css(&#39;display&#39;, &#39;none&#39;);
+                $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxinput&#39;).css(&#39;display&#39;, &#39;none&#39;);
+            }
+        }
+
+        chatboxFocus[conversation_id] = false;
+
+        $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxtextarea&quot;).blur(function () {
+            chatboxFocus[conversation_id] = false;
+            $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxtextarea&quot;).removeClass(&#39;chatboxtextareaselected&#39;);
+        }).focus(function () {
+            chatboxFocus[conversation_id] = true;
+            $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxhead&#39;).removeClass(&#39;chatboxblink&#39;);
+            $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxtextarea&quot;).addClass(&#39;chatboxtextareaselected&#39;);
+        });
+
+        $(&quot;#chatbox_&quot; + conversation_id).click(function () {
+            if ($(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxcontent&#39;).css(&#39;display&#39;) != &#39;none&#39;) {
+                $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxtextarea&quot;).focus();
+            }
+        });
+
+        $(&quot;#chatbox_&quot; + conversation_id).show();
+
+    },
+
+    /**
+       Responsible for listening to the keypresses when chatting. If the Enter button is pressed,
+       we submit our conversation form to our rails app
+
+       @param event
+       @param chatboxtextarea
+       @param conversation_id
+      /
+
+    checkInputKey: function (event, chatboxtextarea, conversation_id) {
+        if (event.keyCode == 13 &amp;&amp; event.shiftKey == 0) {
+            event.preventDefault();
+
+            message = chatboxtextarea.val();
+            message = message.replace(/^\s+|\s+$/g, &quot;&quot;);
+
+            if (message != &#39;&#39;) {
+                $(&#39;#conversation_form_&#39; + conversation_id).submit();
+                $(chatboxtextarea).val(&#39;&#39;);
+                $(chatboxtextarea).focus();
+                $(chatboxtextarea).css(&#39;height&#39;, &#39;44px&#39;);
+            }
+        }
+
+        var adjustedHeight = chatboxtextarea.clientHeight;
+        var maxHeight = 94;
+
+        if (maxHeight &gt; adjustedHeight) {
+            adjustedHeight = Math.max(chatboxtextarea.scrollHeight, adjustedHeight);
+            if (maxHeight)
+                adjustedHeight = Math.min(maxHeight, adjustedHeight);
+            if (adjustedHeight &gt; chatboxtextarea.clientHeight)
+                $(chatboxtextarea).css(&#39;height&#39;, adjustedHeight + 8 + &#39;px&#39;);
+        } else {
+            $(chatboxtextarea).css(&#39;overflow&#39;, &#39;auto&#39;);
+        }
+
+    },
+
+    /**
+       Responsible for handling the growth of chatboxes as they increase on the page
+       Keeps track of the minimized chatboxes etc
+
+       @param conversation_id
+      /
+
+    toggleChatBoxGrowth: function (conversation_id) {
+        if ($(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxcontent&#39;).css(&#39;display&#39;) == &#39;none&#39;) {
+
+            var minimizedChatBoxes = new Array();
+
+            if ($.cookie(&#39;chatbox_minimized&#39;)) {
+                minimizedChatBoxes = $.cookie(&#39;chatbox_minimized&#39;).split(/\|/);
+            }
+
+            var newCookie = &#39;&#39;;
+
+            for (i = 0; i &lt; minimizedChatBoxes.length; i++) {
+                if (minimizedChatBoxes[i] != conversation_id) {
+                    newCookie += conversation_id + &#39;|&#39;;
+                }
+            }
+
+            newCookie = newCookie.slice(0, -1)
+
+            $.cookie(&#39;chatbox_minimized&#39;, newCookie);
+            $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxcontent&#39;).css(&#39;display&#39;, &#39;block&#39;);
+            $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxinput&#39;).css(&#39;display&#39;, &#39;block&#39;);
+            $(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxcontent&quot;).scrollTop($(&quot;#chatbox_&quot; + conversation_id + &quot; .chatboxcontent&quot;)[0].scrollHeight);
+        } else {
+
+            var newCookie = conversation_id;
+
+            if ($.cookie(&#39;chatbox_minimized&#39;)) {
+                newCookie += &#39;|&#39; + $.cookie(&#39;chatbox_minimized&#39;);
+            }
+
+            $.cookie(&#39;chatbox_minimized&#39;, newCookie);
+            $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxcontent&#39;).css(&#39;display&#39;, &#39;none&#39;);
+            $(&#39;#chatbox_&#39; + conversation_id + &#39; .chatboxinput&#39;).css(&#39;display&#39;, &#39;none&#39;);
+        }
+
+    }
+
+}
+
+/**
+   Cookie plugin
+
+   Copyright (c) 2006 Klaus Hartl (stilbuero.de)
+   Dual licensed under the MIT and GPL licenses:
+   http://www.opensource.org/licenses/mit-license.php
+   http://www.gnu.org/licenses/gpl.html
+
+  /
+
+jQuery.cookie = function (name, value, options) {
+    if (typeof value != &#39;undefined&#39;) { // name and value given, set cookie
+        options = options || {};
+        if (value === null) {
+            value = &#39;&#39;;
+            options.expires = -1;
+        }
+        var expires = &#39;&#39;;
+        if (options.expires &amp;&amp; (typeof options.expires == &#39;number&#39; || options.expires.toUTCString)) {
+            var date;
+            if (typeof options.expires == &#39;number&#39;) {
+                date = new Date();
+                date.setTime(date.getTime() + (options.expires * 24 * 60 * 60 * 1000));
+            } else {
+                date = options.expires;
+            }
+            expires = &#39;; expires=&#39; + date.toUTCString(); // use expires attribute, max-age is not supported by IE
+        }
+        // CAUTION: Needed to parenthesize options.path and options.domain
+        // in the following expressions, otherwise they evaluate to undefined
+        // in the packed version for some reason...
+        var path = options.path ? &#39;; path=&#39; + (options.path) : &#39;&#39;;
+        var domain = options.domain ? &#39;; domain=&#39; + (options.domain) : &#39;&#39;;
+        var secure = options.secure ? &#39;; secure&#39; : &#39;&#39;;
+        document.cookie = [name, &#39;=&#39;, encodeURIComponent(value), expires, path, domain, secure].join(&#39;&#39;);
+    } else { // only name given, get cookie
+        var cookieValue = null;
+        if (document.cookie &amp;&amp; document.cookie != &#39;&#39;) {
+            var cookies = document.cookie.split(&#39;;&#39;);
+            for (var i = 0; i &lt; cookies.length; i++) {
+                var cookie = jQuery.trim(cookies[i]);
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) == (name + &#39;=&#39;)) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+};</pre>
+
+<p>}</p>
+
+<p>$(document).ready(ready); $(document).on(“page:load”, ready);</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

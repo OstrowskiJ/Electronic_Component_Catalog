@@ -36,7 +36,7 @@
     <div class ="centruj"><h3>Your Conversations</h3></div>
 
     <div style="height: 400px; overflow-y: auto;">
-      <% if @conversations.any? %>
+      <% if @conversations.try(:any?) %>
           <ul class="media-list">
             <% @conversations.each do |conversation| %>
                 <li class="media">
@@ -48,9 +48,11 @@
                 </li>
 
             <% end %>
-          </ul>
+
       <% else %>
+      <ul class="media-list">
           <p>You have no conversations. Click send message with any user to create one.</p>
+          </ul>
       <% end %>
     </div>
 

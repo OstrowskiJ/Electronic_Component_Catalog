@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>handler.coffee - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../../../../";
+  var index_rel_prefix = "../../../../../";
+</script>
+
+<script src="../../../../../js/jquery.js"></script>
+<script src="../../../../../js/darkfish.js"></script>
+
+<link href="../../../../../css/fonts.css" rel="stylesheet">
+<link href="../../../../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../../../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../../../../table_of_contents.html#pages">Pages</a>
+    <a href="../../../../../table_of_contents.html#classes">Classes</a>
+    <a href="../../../../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../../../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../../../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../../../../README_md.html">README</a>
+  
+    <li><a href="../../../../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../../../../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/catalogs_coffee.html">catalogs.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/channels/room_coffee.html">room.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/chat_js.html">chat.js</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/conversations_coffee.html">conversations.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/base_coffee.html">base.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/base/base_coffee.html">base.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google_coffee.html">google.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/bound_coffee.html">bound.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/circle_coffee.html">circle.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/clusterer_coffee.html">clusterer.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/kml_coffee.html">kml.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/map_coffee.html">map.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/marker_coffee.html">marker.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/polygon_coffee.html">polygon.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/builders/polyline_coffee.html">polyline.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/bound_coffee.html">bound.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/circle_coffee.html">circle.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/clusterer_coffee.html">clusterer.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/common_coffee.html">common.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/kml_coffee.html">kml.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/map_coffee.html">map.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/marker_coffee.html">marker.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/polygon_coffee.html">polygon.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/objects/polyline_coffee.html">polyline.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/google/primitives_coffee.html">primitives.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/objects/base_builder_coffee.html">base_builder.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/objects/builder_coffee.html">builder.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/objects/handler_coffee.html">handler.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/gmaps/objects/null_clusterer_coffee.html">null_clusterer.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/home_coffee.html">home.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/locations_coffee.html">locations.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/messages_coffee.html">messages.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/posts_coffee.html">posts.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/rooms_coffee.html">rooms.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/searches_coffee.html">searches.coffee</a>
+  
+    <li><a href="../../../../../app/assets/javascripts/users_js.html">users.js</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/application_css_scss.html">application.css.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/catalogs_scss.html">catalogs.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/chat_css.html">chat.css</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/conversations_scss.html">conversations.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/custom_css_scss.html">custom.css.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/home_scss.html">home.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/locations_scss.html">locations.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/messages_scss.html">messages.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/posts_scss.html">posts.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/rooms_scss.html">rooms.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/scaffolds_scss.html">scaffolds.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/searches_scss.html">searches.scss</a>
+  
+    <li><a href="../../../../../app/assets/stylesheets/users_scss.html">users.scss</a>
+  
+    <li><a href="../../../../../app/views/locations/_location_json_jbuilder.html">_location.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/locations/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/locations/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/posts/_post_json_jbuilder.html">_post.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/posts/index_json_jbuilder.html">index.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/posts/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/users/_location_json_jbuilder.html">_location.json.jbuilder</a>
+  
+    <li><a href="../../../../../app/views/users/show_json_jbuilder.html">show.json.jbuilder</a>
+  
+    <li><a href="../../../../../config_ru.html">config.ru</a>
+  
+    <li><a href="../../../../../db/test_sqlite3.html">test.sqlite3</a>
+  
+    <li><a href="../../../../../log/development_log.html">development.log</a>
+  
+    <li><a href="../../../../../log/production_log.html">production.log</a>
+  
+    <li><a href="../../../../../log/test_log.html">test.log</a>
+  
+    <li><a href="../../../../../private_pub_ru.html">private_pub.ru</a>
+  
+    <li><a href="../../../../../public/404_html.html">404.html</a>
+  
+    <li><a href="../../../../../public/422_html.html">422.html</a>
+  
+    <li><a href="../../../../../public/500_html.html">500.html</a>
+  
+    <li><a href="../../../../../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../../../../../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../../../../../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../../../../../public/javascripts/gmaps_google_js.html">gmaps_google.js</a>
+  
+    <li><a href="../../../../../public/robots_txt.html">robots</a>
+  
+    <li><a href="../../../../../tmp/restart_txt.html">restart</a>
+  
+    <li><a href="../../../../../vendor/assets/javascripts/underscore_js.html">underscore.js</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page app/assets/javascripts/gmaps/objects/handler.coffee">
+
+<p>class @Gmaps.Objects.Handler</p>
+
+<pre># options:
+#   markers:
+#     maxRandomDistance: null / int in meters
+#     singleInfowindow:  true/false
+#     clusterer:         null or object with options if you want clusters
+#   models:   object, custom models   if you have some
+#   builders: object, custom builders if you have some
+#
+constructor: (@type, options = {})-&gt;
+  @setPrimitives options
+  @setOptions options
+  @_cacheAllBuilders()
+  @resetBounds()
+
+buildMap: (options, onMapLoad = -&gt;)-&gt;
+  @map = @_builder(&#39;Map&#39;).build options, =&gt;
+    @_createClusterer()
+    onMapLoad()
+
+# return array of marker objects
+addMarkers: (markers_data, provider_options)-&gt;
+  _.map markers_data, (marker_data)=&gt;
+    @addMarker marker_data, provider_options
+
+# return marker object
+addMarker: (marker_data, provider_options)-&gt;
+  marker = @_builder(&#39;Marker&#39;).build(marker_data, provider_options, @marker_options)
+  marker.setMap(@getMap())
+  @clusterer.addMarker marker
+  marker
+
+# return array of circle objects
+addCircles: (circles_data, provider_options)-&gt;
+  _.map circles_data, (circle_data)=&gt;
+    @addCircle circle_data, provider_options
+
+# return circle object
+addCircle: (circle_data, provider_options)-&gt;
+  @_addResource(&#39;circle&#39;, circle_data, provider_options)
+
+# return array of polyline objects
+addPolylines: (polylines_data, provider_options)-&gt;
+  _.map polylines_data, (polyline_data)=&gt;
+    @addPolyline polyline_data, provider_options
+
+# return polyline object
+addPolyline: (polyline_data, provider_options)-&gt;
+  @_addResource(&#39;polyline&#39;, polyline_data, provider_options)
+
+# return array of polygon objects
+addPolygons: (polygons_data, provider_options)-&gt;
+  _.map polygons_data, (polygon_data)=&gt;
+    @addPolygon polygon_data, provider_options
+
+# return polygon object
+addPolygon: (polygon_data, provider_options)-&gt;
+  @_addResource(&#39;polygon&#39;, polygon_data, provider_options)
+
+# return array of kml objects
+addKmls: (kmls_data, provider_options)-&gt;
+  _.map kmls_data, (kml_data)=&gt;
+    @addKml kml_data, provider_options
+
+# return kml object
+addKml: (kml_data, provider_options)-&gt;
+  @_addResource(&#39;kml&#39;, kml_data, provider_options)
+
+# removes markers from map
+removeMarkers: (gem_markers)-&gt;
+  _.map gem_markers, (gem_marker)=&gt;
+    @removeMarker gem_marker
+
+# removes marker from map
+removeMarker: (gem_marker)-&gt;
+  gem_marker.clear()
+  @clusterer.removeMarker(gem_marker)
+
+fitMapToBounds: -&gt;
+  @map.fitToBounds @bounds.getServiceObject()
+
+getMap: -&gt;
+  @map.getServiceObject()
+
+setOptions: (options)-&gt;
+  @marker_options = _.extend @_default_marker_options(), options.markers
+  @builders       = _.extend @_default_builders(),       options.builders
+  @models         = _.extend @_default_models(),         options.models
+
+resetBounds: -&gt;
+  @bounds = @_builder(&#39;Bound&#39;).build()
+
+setPrimitives: (options)-&gt;
+  @primitives = if options.primitives is undefined
+                  @_rootModule().Primitives()
+                else
+                  if _.isFunction(options.primitives) then options.primitives() else options.primitives
+
+currentInfowindow: -&gt;
+  @builders.Marker.CURRENT_INFOWINDOW
+
+_addResource: (resource_name, resource_data, provider_options)-&gt;
+  resource = @_builder(resource_name).build(resource_data, provider_options)
+  resource.setMap(@getMap())
+  resource
+
+_cacheAllBuilders: -&gt;
+  that = @
+  _.each [&#39;Bound&#39;, &#39;Circle&#39;,  &#39;Clusterer&#39;, &#39;Kml&#39;, &#39;Map&#39;, &#39;Marker&#39;, &#39;Polygon&#39;, &#39;Polyline&#39;], (kind)-&gt; that._builder(kind)
+
+_clusterize: -&gt;
+  _.isObject @marker_options.clusterer
+
+_createClusterer: -&gt;
+  @clusterer = @_builder(&#39;Clusterer&#39;).build({ map: @getMap() }, @marker_options.clusterer )
+
+_default_marker_options: -&gt;
+  _.clone {
+    singleInfowindow:  true
+    maxRandomDistance: 0
+    clusterer:
+      maxZoom:  5
+      gridSize: 50
+  }
+
+_builder: (name)-&gt;
+  name = @_capitalize(name)
+  @[&quot;__builder#{name}&quot;] ?= Gmaps.Objects.Builders(@builders[name], @models[name], @primitives)
+  @[&quot;__builder#{name}&quot;]
+
+_default_models: -&gt;
+  models = _.clone(@_rootModule().Objects)
+  if @_clusterize()
+    models
+  else
+    models.Clusterer = Gmaps.Objects.NullClusterer
+    models
+
+_capitalize: (string)-&gt;
+  string.charAt(0).toUpperCase() + string.slice(1)
+
+_default_builders: -&gt;
+  _.clone @_rootModule().Builders
+
+_rootModule: -&gt;
+  @__rootModule ?= Gmaps[@type]
+  @__rootModule</pre>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://rdoc.github.io/rdoc">RDoc</a> 5.1.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

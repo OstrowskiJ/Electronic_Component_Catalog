@@ -1,11 +1,12 @@
-<div id="catalog">
-  <p><%= @catalog.category %></p>
-  <p><%= @catalog.element %></p>
-  <p><%= @catalog.value %></p>
-  <p><%= @catalog.amount %></p>
+<div class="containerelement"><div id="catalog">
+  <span class="element-pic"></span>
+  <p>Category: <%= @catalog.category %></p>
+  <p>Name: <%= @catalog.element %></p>
+  <p>Value: <%= @catalog.value %></p>
+  <p>Amount: <%= @catalog.amount %></p>
 </div>
-<%= link_to "Back", root_path %>
 <% if @catalog.user == current_user %>
-<%= link_to "Edit", edit_catalog_path(@catalog) %>
-<%= link_to "Delete", catalog_path(@catalog), method: :delete, data: { confirm: "Are you sure?"} %>
+<%= link_to "Edit", edit_catalog_path(@catalog), class:"btn btn-warning" %>
+<%= link_to "Delete", catalog_path(@catalog), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger" %>
 <% end %>
+</div>
